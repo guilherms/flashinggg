@@ -5,11 +5,7 @@ app.config['SECRET_KEY'] = 'secret'
 
 @app.route('/')
 def index():
-  return render_template('indexum.html')
-
-@app.route('/hello/<name>')
-def flashing(name):
-  flash(f'Bem-vindo, {name}!', 'info')
+  flash('Sucesso', 'success')
   return render_template('index.html')
 
 
