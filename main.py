@@ -3,7 +3,7 @@ from flask import Flask, flash, render_template
 app = Flask('app')
 app.config['SECRET_KEY'] = 'secret'
 
-@app.route('/')
+@app.route('/flashing')
 def index():
   flash('Sucesso', 'success')
   return render_template('index.html')
